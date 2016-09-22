@@ -15400,7 +15400,7 @@ THREE.EventDispatcher.prototype = {
 
 			Mesh: {},
 
-			PointCloud: { threshold: 1 },
+			PointCloud: { threshold: 0.001 },//was 1, changed by sonja
 
 			LOD: {},
 
@@ -15474,8 +15474,8 @@ THREE.EventDispatcher.prototype = {
 
 
 
-		precision: 0.00001,
-        //precision: 0.0000000001,//by sonja
+		//precision: 0.00001,
+        precision: 0.0000000001,//by sonja
 		linePrecision: 1,
 
        // linePrecision: 0.0001,
@@ -15507,7 +15507,8 @@ THREE.EventDispatcher.prototype = {
 			if ( camera instanceof THREE.PerspectiveCamera ) {
 
 
-
+			    this.near = camera.near; //added by sonja
+			    this.far = camera.far;//added by sonja
 				this.ray.origin.copy( camera.position );
 
 				this.ray.direction.set( coords.x, coords.y, 0.5 ).unproject( camera ).sub( camera.position ).normalize();
@@ -72065,7 +72066,7 @@ module.exports = (function () {
                 this.camera.updateProjectionMatrix();
             }
             else {
-                this.camera.near = 0.001;//XXXXXXXXXXXXXXXXXXXXXX
+                this.camera.near = 0.01;//XXXXXXXXXXXXXXXXXXXXXX
                 this.camera.far = boundingSphere.radius * 2;
                 this.camera.updateProjectionMatrix();
             }
