@@ -1,6 +1,8 @@
 # FungaeDataViz_LargeVis
 Visualization of the data of the Massive Biological Data Clustering, Reporting and Visualization Tools with LargeVIs
 
-Please cite the software if you are using it in your scientific publication using the following DOI:
+Please cite the software if you are using it in your scientific publication:
 
-[![DOI](https://zenodo.org/badge/24090/sonjageorgievska/CClusTera.svg)](https://zenodo.org/badge/latestdoi/24090/sonjageorgievska/CClusTera)
+[![DOI](https://zenodo.org/badge/69663950.svg)](https://zenodo.org/badge/latestdoi/69663950)
+
+More info: https://github.com/sonjageorgievska/DiVE
